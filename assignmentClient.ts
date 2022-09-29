@@ -16,7 +16,7 @@ export async function getAllAssignments() : Promise<Assignment[]> {
 
   return new Promise(res => setTimeout(() => {
     res(assignments);
-  }, 5));
+  }, 1000));
 }
 
 type User = {
@@ -34,7 +34,7 @@ export async function getUserById(id: string) : Promise<User|undefined> {
   return new Promise(res => setTimeout(() => {
     const user = userDataBase.find(user => user.id === id);
     res(user);
-  }, 5));
+  }, 1000));
 };
 
 export const expectedResult = [
